@@ -1,0 +1,87 @@
+{
+  "name": "trail-blazin",
+  "version": "0.0.0",
+  "scripts": {
+    "all-tests": "npm run lint && npm run test && npm run e2e",
+    "all-tests-headless": "npm run lint && npm run test-headless && npm run e2e-headless",
+    "build": "ng build --aot --prod && npm run build-server",
+    "build-server": "tsc server.ts --outDir dist/",
+    "build-dev": "ng build && npm run build-server",
+    "build-storybook": "build-storybook",
+    "dev": "ng serve",
+    "e2e": "ng e2e",
+    "e2e-headless": "ng e2e --protractor-config='e2e/ci.protractor.conf.js'",
+    "lint": "ng lint",
+    "ng": "ng",
+    "prettier": "pretty-quick",
+    "start": "node dist/server.js",
+    "storybook": "start-storybook -p 6006",
+    "test": "ng test --codeCoverage=true --watch=false",
+    "test-headless": "ng test --codeCoverage=true --watch=false --browsers=ChromeHeadless"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~11.0.3",
+    "@angular/common": "~11.0.3",
+    "@angular/compiler": "~11.0.3",
+    "@angular/core": "~11.0.3",
+    "@angular/forms": "~11.0.3",
+    "@angular/platform-browser": "~11.0.3",
+    "@angular/platform-browser-dynamic": "~11.0.3",
+    "@angular/router": "~11.0.3",
+    "express": "^4.17.1",
+    "rxjs": "~6.6.0",
+    "tslib": "^2.0.0",
+    "zone.js": "~0.10.2"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.1100.3",
+    "@angular-eslint/builder": "0.8.0-beta.3",
+    "@angular-eslint/eslint-plugin": "0.8.0-beta.3",
+    "@angular-eslint/eslint-plugin-template": "0.8.0-beta.3",
+    "@angular-eslint/schematics": "^0.8.0-beta.3",
+    "@angular-eslint/template-parser": "0.8.0-beta.3",
+    "@angular/cli": "~11.0.3",
+    "@angular/compiler-cli": "~11.0.3",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@types/express": "^4.17.9",
+    "@types/jasmine": "~3.6.0",
+    "@types/node": "^12.11.1",
+    "@typescript-eslint/eslint-plugin": "4.3.0",
+    "@typescript-eslint/parser": "4.3.0",
+    "codelyzer": "^6.0.0",
+    "eslint": "^7.6.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-jsdoc": "30.7.6",
+    "eslint-plugin-prefer-arrow": "1.2.2",
+    "husky": "^4.3.5",
+    "jasmine-core": "~3.6.0",
+    "jasmine-spec-reporter": "~5.0.0",
+    "karma": "~5.1.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.0.3",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "^1.5.0",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0",
+    "protractor": "~7.0.0",
+    "ts-node": "~8.3.0",
+    "typescript": "~4.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blaise2s/trail-blazin.git"
+  },
+  "author": "Blaise Schaeffer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tap-Vote/trail-blazin/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
