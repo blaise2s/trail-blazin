@@ -3,12 +3,15 @@ language: node_js
 node_js:
   - node
 
-script:
-  - npm run all-tests-headless
-  - npm run build
+addons:
+  chrome: stable
 
 deploy:
   provider: heroku
   app: trail-blazin
   api_key:
     secure: EbjZBgVYK7fubaYr/v/tSEbBxoY+QdJlPJjQhgeMhbkWIDhzeM90wHSK2/WXByR3Nha/ZgMngJQ2fArhW1tXqoRTLWTIBJHkFkPM6Bhf9YnkjsoUXskASKRRsn/1cA3m0H+VDk8+4NW0D5MlP8RyeIPDr1MjMdZ7xIsxGwulYXnuvTsbCAJzKrjkwwRA1ed3zCZz5QeEgtr91gX+5rY05A5mih9xXaADURMnr+Soovf6FbNY7BIuRkO24L4W1dQzM5piu7vtTy8/KMdMlQ+yYV4IKVYMuVF+f/mcWoLuIKDaG8xOsemsgeNbK0qYxYSjjsmZu7AMi8YDU6hhFt42z8RMcfwkqe7GArTwCK1SM2SoGe7cuFgCxxJxnqEbR3Uxsjrvb0t461VUX4teKGMMt/DbaMi/g3kveJz25aDZCSZkY+VmQ6JgvEKEkBjixwct+WkJ7AT2Hn9uGc8tfVKsP9tOvb81x588OlMYEPDAWX/luymcGKShy+a+15E4LoNp9UuUcLIMjhxOyb/agrmjo1/HL/0kGTo5JerGgOkKQsmJ5n4Onx+w0OWAE4yfz8zFFnmKTkUNGIjJGZaMXZg3BTJkAU2WXRAIpNh4Een5XjoPXGzddjn3Nl8XFDQU2fRd9juV0x87yDmE9Lq6vQlvMI4otTaigFTopGdlWing1zo=
+
+script:
+  - npm run all-tests-headless
+  - npm run build
