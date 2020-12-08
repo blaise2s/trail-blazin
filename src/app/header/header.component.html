@@ -1,0 +1,28 @@
+<mat-toolbar class="tb-header" color="primary">
+  <a class="brand" routerLink="">Trail Blazin'</a>
+  <div>
+    <button
+      mat-icon-button
+      color="accent"
+      [matMenuTriggerFor]="menu"
+      aria-label="menu"
+    >
+      <mat-icon aria-hidden="false" aria-label="menu">menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="cycling">
+        <!-- <mat-icon>directions_bike</mat-icon> -->
+        <span>Cycling</span>
+      </button>
+      <button mat-menu-item routerLink="gardening">
+        <!-- <mat-icon>grass</mat-icon> -->
+        <span>Gardening</span>
+      </button>
+      <button mat-menu-item routerLink="baking">
+        <!-- <mat-icon>cake</mat-icon> -->
+        <span>Baking</span>
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
+<router-outlet></router-outlet>

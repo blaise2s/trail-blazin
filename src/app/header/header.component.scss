@@ -1,0 +1,26 @@
+@import '/src/variables';
+
+.tb-header {
+  height: 3rem;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .brand {
+    text-decoration: none;
+    border: solid transparent 2px;
+    border-radius: 6px;
+    box-sizing: border-box;
+
+    &:visited,
+    &:active {
+      color: $accent;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: white;
+    }
+  }
+}
