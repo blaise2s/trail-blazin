@@ -1,0 +1,13 @@
+@import '/src/assets/scss/variables';
+
+@mixin desktop-width {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin desktop-height {
+  @media (min-height: $desktop-height) {
+    @content;
+  }
+}

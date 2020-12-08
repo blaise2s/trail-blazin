@@ -1,0 +1,17 @@
+@mixin build($prefix-property-map, $variable-value-map) {
+  @each $prefix, $property in $prefix-property-map {
+    $singleProperty: length($property) == 1;
+    @each $variable, $value in $variable-value-map {
+      $i: index($variable-value-map, ($variable $value));
+      .#{$prefix}-#{$i - 1} {
+        @if $singleProperty {
+          #{$property}: $value;
+        } @else {
+          @each $subProperty in $property {
+            #{$subProperty}: $value;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+$padding-helpers: (
+  p: padding,
+  pl: padding-left,
+  pr: padding-right,
+  pt: padding-top,
+  pb: padding-bottom,
+  px: (
+    padding-left,
+    padding-right
+  ),
+  py: (
+    padding-top,
+    padding-bottom
+  )
+);
+
+@include build($padding-helpers, $layouts);

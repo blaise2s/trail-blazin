@@ -1,0 +1,15 @@
+#content {
+  width: 100%;
+  height: calc(100vh - 3rem);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+
+  #outlet {
+    padding: 1rem;
+  }
+
+  #fill {
+    flex: 1 1 auto;
+  }
+}

@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { CyclingComponent } from './cycling/cycling.component';
 import { GardeningComponent } from './gardening/gardening.component';
 import { BakingComponent } from './baking/baking.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { BakingComponent } from './baking/baking.component';
     HomeComponent,
     CyclingComponent,
     GardeningComponent,
-    BakingComponent
+    BakingComponent,
+    FooterComponent
   ],
   imports: [
     AppRoutingModule,
