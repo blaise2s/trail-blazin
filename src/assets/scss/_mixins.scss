@@ -1,0 +1,28 @@
+@mixin build($prefix-property-map, $suffix-value-map) {
+  @each $prefix, $property in $prefix-property-map {
+    $singleProperty: length($property) == 1;
+    @each $suffix, $value in $suffix-value-map {
+      .#{$prefix}-#{$suffix} {
+        @if $singleProperty {
+          #{$property}: $value;
+        } @else {
+          @each $subProperty in $property {
+            #{$subProperty}: $value;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin desktop-width {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin desktop-height {
+  @media (min-height: $desktop-height) {
+    @content;
+  }
+}

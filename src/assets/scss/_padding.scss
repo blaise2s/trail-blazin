@@ -1,0 +1,33 @@
+$padding-helpers: (
+  p: padding,
+  pl: padding-left,
+  pr: padding-right,
+  pt: padding-top,
+  pb: padding-bottom,
+  px: (
+    padding-left,
+    padding-right
+  ),
+  py: (
+    padding-top,
+    padding-bottom
+  )
+);
+@include build($padding-helpers, $layouts);
+
+$padding-spacing-helpers: (
+  sp-p: padding,
+  sp-pl: padding-left,
+  sp-pr: padding-right,
+  sp-pt: padding-top,
+  sp-pb: padding-bottom,
+  sp-px: (
+    padding-left,
+    padding-right
+  ),
+  sp-py: (
+    padding-top,
+    padding-bottom
+  )
+);
+@include build($padding-spacing-helpers, $spacings);

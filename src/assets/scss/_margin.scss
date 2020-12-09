@@ -1,0 +1,33 @@
+$margin-helpers: (
+  m: margin,
+  ml: margin-left,
+  mr: margin-right,
+  mt: margin-top,
+  mb: margin-bottom,
+  mx: (
+    margin-left,
+    margin-right
+  ),
+  my: (
+    margin-top,
+    margin-bottom
+  )
+);
+@include build($margin-helpers, $layouts);
+
+$margin-spacing-helpers: (
+  sp-m: margin,
+  sp-ml: margin-left,
+  sp-mr: margin-right,
+  sp-mt: margin-top,
+  sp-mb: margin-bottom,
+  sp-mx: (
+    margin-left,
+    margin-right
+  ),
+  sp-my: (
+    margin-top,
+    margin-bottom
+  )
+);
+@include build($margin-spacing-helpers, $spacings);

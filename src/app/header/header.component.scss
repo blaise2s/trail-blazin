@@ -1,0 +1,41 @@
+@import '/src/assets/scss/mixins';
+
+@import '/src/assets/scss/variables';
+
+#tb-header {
+  background-color: transparent;
+  box-shadow: 0px -3px 10px 0px $black;
+  height: 3rem;
+  padding: 0 1rem;
+
+  #brand {
+    text-decoration: none;
+    border: solid transparent 2px;
+    border-radius: 6px;
+    box-sizing: border-box;
+
+    &:visited,
+    &:active {
+      color: $black;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $primary;
+    }
+  }
+
+  #desktop {
+    display: none;
+  }
+
+  @include desktop-width {
+    #mobile {
+      display: none;
+    }
+
+    #desktop {
+      display: flex;
+    }
+  }
+}

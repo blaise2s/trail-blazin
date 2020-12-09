@@ -1,0 +1,7 @@
+@function layout($layout) {
+  @return map-get($layouts, $layout);
+}
+
+@function spacing($spacing) {
+  @return map-get($spacings, $spacing);
+}

@@ -1,0 +1,47 @@
+@import '/src/assets/scss/variables';
+@import '/src/assets/scss/functions';
+@import '/src/assets/scss/mixins';
+
+#tb-footer {
+  padding: 0.5rem 1rem;
+  color: $black;
+  font-size: 1rem;
+  height: 7rem;
+  align-items: flex-start;
+  justify-content: space-around;
+
+  .footer-section {
+    > div {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 18px;
+      padding-bottom: spacing(2);
+    }
+  }
+
+  .footer-link {
+    text-decoration: none;
+    border: solid transparent 1px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    padding-bottom: spacing(1);
+
+    &:visited,
+    &:active {
+      color: $black;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $white;
+    }
+  }
+}
+
+@include desktop-height {
+  #tb-footer {
+    height: 10rem;
+  }
+}
