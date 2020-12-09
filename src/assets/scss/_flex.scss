@@ -1,15 +1,24 @@
-.flex-row {
-  flex-direction: row;
-}
+$flex-direction-helpers: (
+  flex: flex-direction
+);
+@include build($flex-direction-helpers, $flex-directions);
 
-.flex-column {
-  flex-direction: column;
-}
+$flex-wrap-helpers: (
+  flex: flex-wrap
+);
+@include build($flex-wrap-helpers, $flex-wraps);
 
-.align-items-center {
-  align-items: center;
-}
+$justify-content-helpers: (
+  justify-content: justify-content
+);
+@include build($justify-content-helpers, $content-justification);
 
-.justify-content-between {
-  justify-content: space-between;
-}
+$align-item-helpers: (
+  align-items: align-items
+);
+@include build($align-item-helpers, $item-alignment);
+
+$align-content-helpers: (
+  align-content: align-content
+);
+@include build($align-content-helpers, $content-alignment);
