@@ -1,9 +1,8 @@
-@mixin build($prefix-property-map, $variable-value-map) {
+@mixin build($prefix-property-map, $suffix-value-map) {
   @each $prefix, $property in $prefix-property-map {
     $singleProperty: length($property) == 1;
-    @each $variable, $value in $variable-value-map {
-      $i: index($variable-value-map, ($variable $value));
-      .#{$prefix}-#{$i - 1} {
+    @each $suffix, $value in $suffix-value-map {
+      .#{$prefix}-#{$suffix} {
         @if $singleProperty {
           #{$property}: $value;
         } @else {
