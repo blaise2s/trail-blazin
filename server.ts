@@ -14,7 +14,7 @@ app.get('/*', (_request, response) => {
 const port = (process.env.PORT ? +process.env.PORT : false) || 4200;
 const host = process.env.HOST;
 const callbackFn = (port: number) => {
-  console.log(`Tap Vote 🚀 app started on port ${port}`);
+  console.log(`Trail Blazin' 🚀 app started on port ${port}`);
 };
 console.log(`\nHOST: ${host ? host : 'env variable is not set'}`);
 console.log(`PORT: ${port ? port : 'env variable is not set'}`);
