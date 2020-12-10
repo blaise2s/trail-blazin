@@ -1,24 +1,24 @@
 $flex-direction-helpers: (
   flex: flex-direction
 );
-@include build($flex-direction-helpers, $flex-directions);
+@include build-helpers($flex-direction-helpers, $flex-directions);
 
 $flex-wrap-helpers: (
   flex: flex-wrap
 );
-@include build($flex-wrap-helpers, $flex-wraps);
+@include build-helpers($flex-wrap-helpers, $flex-wraps);
 
 $justify-content-helpers: (
   justify-content: justify-content
 );
-@include build($justify-content-helpers, $content-justification);
+@include build-helpers($justify-content-helpers, $content-justification);
 
 $align-item-helpers: (
   align-items: align-items
 );
-@include build($align-item-helpers, $item-alignment);
+@include build-helpers($align-item-helpers, $item-alignment);
 
 $align-content-helpers: (
   align-content: align-content
 );
-@include build($align-content-helpers, $content-alignment);
+@include build-helpers($align-content-helpers, $content-alignment);

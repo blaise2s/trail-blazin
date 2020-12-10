@@ -5,3 +5,13 @@
 @function spacing($spacing) {
   @return map-get($spacings, $spacing);
 }
+
+@function ibm-color($color, $intensity: 100) {
+  $intensities: map-get($ibm-color-map, $color);
+  $singleIntensity: length($intensities) == 1;
+  @if $singleIntensity {
+    @return $intensities;
+  } @else {
+    @return map-get($intensities, $intensity);
+  }
+}
