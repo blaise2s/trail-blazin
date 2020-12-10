@@ -13,7 +13,7 @@ $margin-helpers: (
     margin-bottom
   )
 );
-@include build($margin-helpers, $layouts);
+@include build-helpers($margin-helpers, $layouts);
 
 $margin-spacing-helpers: (
   sp-m: margin,
@@ -30,4 +30,4 @@ $margin-spacing-helpers: (
     margin-bottom
   )
 );
-@include build($margin-spacing-helpers, $spacings);
+@include build-helpers($margin-spacing-helpers, $spacings);

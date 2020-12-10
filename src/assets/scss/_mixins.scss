@@ -1,4 +1,4 @@
-@mixin build($prefix-property-map, $suffix-value-map) {
+@mixin build-helpers($prefix-property-map, $suffix-value-map) {
   @each $prefix, $property in $prefix-property-map {
     $singleProperty: length($property) == 1;
     @each $suffix, $value in $suffix-value-map {
@@ -9,6 +9,35 @@
           @each $subProperty in $property {
             #{$subProperty}: $value;
           }
+        }
+      }
+    }
+  }
+}
+
+@mixin build-color-helpers($color-map) {
+  @each $color, $intensities in $color-map {
+    $singleIntensity: length($intensities) == 1;
+    @if $singleIntensity {
+      .c-#{$color} {
+        color: $intensities;
+      }
+      .bg-#{$color} {
+        background-color: $intensities;
+      }
+      .fill-#{$color} {
+        fill: $intensities;
+      }
+    } @else {
+      @each $intensity, $hex in $intensities {
+        .c-#{$color}-#{$intensity} {
+          color: $hex;
+        }
+        .bg-#{$color}-#{$intensity} {
+          background-color: $hex;
+        }
+        .fill-#{$color}-#{$intensity} {
+          fill: $hex;
         }
       }
     }

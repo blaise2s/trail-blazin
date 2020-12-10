@@ -13,7 +13,7 @@ $padding-helpers: (
     padding-bottom
   )
 );
-@include build($padding-helpers, $layouts);
+@include build-helpers($padding-helpers, $layouts);
 
 $padding-spacing-helpers: (
   sp-p: padding,
@@ -30,4 +30,4 @@ $padding-spacing-helpers: (
     padding-bottom
   )
 );
-@include build($padding-spacing-helpers, $spacings);
+@include build-helpers($padding-spacing-helpers, $spacings);
